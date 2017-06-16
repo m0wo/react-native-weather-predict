@@ -99,7 +99,7 @@ class App extends Component {
       <View style={[styles.container, {backgroundColor: phrases[this.state.average].background}]}>
         <StatusBar hidden={false} barStyle="light-content"/>
         <View style={styles.header}>
-          <Icon name={iconNames[this.state.weather]} size={80} color={'white'}/>
+          <Icon name={iconNames[this.state.weather]} size={150} color={'white'}/>
           <Text style={styles.temp}>{this.state.temp}°</Text>
         </View>
         <View style={styles.body}>
@@ -122,18 +122,19 @@ const styles = StyleSheet.create({
   },
   header: {
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     flex: 1,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    padding: 40
   },
   temp: {
     fontFamily: 'HelveticaNeue-Bold',
-    fontSize: 45,
-    color: 'white'
+    fontSize: 92,
+    color: 'white',
   },
   title: {
-    fontFamily: 'HelveticaNeue-Bold',
-    fontSize: 90,
+    fontFamily: 'HelveticaNeue-light',
+    fontSize: 92,
     color: 'white',
     marginTop: 5
   },
@@ -144,7 +145,7 @@ const styles = StyleSheet.create({
   },
   body: {
     alignItems: 'flex-start',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     flex: 5,
     marginLeft: 10,
     marginRight: 10
